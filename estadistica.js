@@ -22,7 +22,7 @@ const lista1 = [
 ];
 
 //PROMEDIO
-console.group('PROMEDIO');
+console.groupCollapsed('PROMEDIO');
 const calcularPromedio = (lista) => {
     const sumaLista = lista.reduce(
         (valorAcumulado = 0, nuevoElemento) => valorAcumulado + nuevoElemento
@@ -35,14 +35,13 @@ console.log(`Promedio: ${calcularPromedio(lista1)}`);
 console.groupEnd();
 
 //MEDIANA
-console.group('MEDIANA');
+console.groupCollapsed('MEDIANA');
 const esPar = (numero) => {
     return (numero % 2) === 0;
 }
 
 const ordenarLista = (lista) => {
     const listaOrdenada = lista.sort((a,b) => a-b);
-    console.log(listaOrdenada);
     return listaOrdenada;
 }
 
@@ -67,7 +66,7 @@ console.log(`Mediana: ${calcularMediana(lista1)}`);
 console.groupEnd();
 
 //MODA
-console.group('MODA');
+console.groupCollapsed('MODA');
     const calcularModa = (lista) => {
         const contadorLista = {};
         lista.map((elemento) => {
